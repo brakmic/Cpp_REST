@@ -4,7 +4,7 @@ This demo consists of three small VS projects:
 
 a) **C++ DLL with exported functions**
 
-b) **C++ Console App** using headers from the DLL
+b) **C++ Console App** using headers from DLL
 
 c) **C# Console App** using DllImport
 
@@ -14,7 +14,7 @@ The DLL Exports are as follows:
 
 **C++ Client App**
 
-The C++ App uses the *Connector.h* header from the DLL to create a unique_ptr
+The C++ App uses the *Connector.h* header from DLL to create a *unique_ptr*
 of the Connector class. 
 
 Connector utilizes internally the C++ REST SDK (Casablanca) to call a
