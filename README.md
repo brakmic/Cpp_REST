@@ -1,5 +1,4 @@
-## JSON Clients based on C++ REST SDK & C#
-
+## HTTP-Clients based on C++ REST SDK & C# ##
 This demo consists of three small VS projects:
 
 a) **C++ DLL with exported functions**
