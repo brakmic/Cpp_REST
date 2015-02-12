@@ -32,8 +32,8 @@ via objects & functions from the <a href="https://msdn.microsoft.com/de-de/libra
 
 **C# Client App**
 
-The .NET App imposed a several restrictions to the exported functions from the
-C++ library. Instead of C++ <a href="http://en.cppreference.com/w/cpp/utility/functional/function" target="_blank">function templates</a> I had to use old-style C function
+The .NET App imposes several restrictions to exported functions. 
+Instead of C++ <a href="http://en.cppreference.com/w/cpp/utility/functional/function" target="_blank">function templates</a> I had to use old-style C function
 pointers. This is because .NET can only marshal Delegates to function pointers. 
 The same happened to the C++ string class. It was replaced by 
 raw *wchar_t* pointers. Ugly, but playing with .NET *DllImport* is always rather
