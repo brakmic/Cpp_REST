@@ -17,7 +17,7 @@ The DLL Exports are as follows:
 The C++ App uses the *Connector.h* header from DLL to create a *unique_ptr*
 of the Connector class. 
 
-Connector utilizes internally the C++ REST SDK (Casablanca) to call a
+Connector utilizes internally the <a href="https://casablanca.codeplex.com/" target="_blank">C++ REST SDK (Casablanca)</a> to call a
 publicly available JSON Echo service.
 
 <img src="http://p33.imgup.net/call_echo_c916.png"/>
