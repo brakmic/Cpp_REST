@@ -44,7 +44,7 @@ This is how the whole <a href="https://msdn.microsoft.com/en-us/library/system.r
 <img src="http://p82.imgup.net/csharp_clic7a7.png" />
 
 First, we declare a delegate and decorate it as an "unmanaged" (that is, non-NET callable) function pointer. Also, we set the
-calling convention to StdCall. This means that the callee will be responsible to clean the stack and not the caller. More info
+calling convention to *StdCall*. This means that the callee (the DLL function) will be responsible to clean the stack and not the caller (the Client). More info
 on argument passing and calling conventions <a href="https://msdn.microsoft.com/en-us/library/984x0h58.aspx" target="_blank">here</a>
 
 Second, we grab the DLL which hopefully exports the desired function. In this case the DLL *Connector.dll* should be located in the directory of
