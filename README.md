@@ -43,17 +43,17 @@ This is how the whole <a href="https://msdn.microsoft.com/en-us/library/system.r
 
 <img src="http://p82.imgup.net/csharp_clic7a7.png" />
 
-First, we declare a delegate and decorate it as an "unmanaged" (that is, non-NET callable) function pointer. Also, we set the
+**First**, we declare a delegate and decorate it as an "unmanaged" (that is, non-NET callable) function pointer. Also, we set the
 calling convention to *StdCall*. This means that the callee (the DLL function) will be responsible to clean the stack and not the caller (the Client). More info
-on argument passing and calling conventions <a href="https://msdn.microsoft.com/en-us/library/984x0h58.aspx" target="_blank">here</a>
+on argument passing and calling conventions <a href="https://msdn.microsoft.com/en-us/library/984x0h58.aspx" target="_blank">here</a>.
 
-Second, we grab the DLL which hopefully exports the desired function. In this case the DLL *Connector.dll* should be located in the directory of
+**Second**, we grab the DLL which hopefully exports the desired function. In this case the DLL *Connector.dll* should be located in the directory of
 the executing assembly. In other cases we'd adjust the first argument after [DllImport] Attribute. Also, the same calling convention is applied.
 Now, it's important to know that functions from non-NET DLLs are statically imported externals and very often demand special treatment of passed arguments.
 In this case we have to marshal a pure .NET entity, the Delegate, to a raw C function pointer. To achieve this we use another attribute [MarshalAs] and 
 decorate the *OnCompletedDelegate* as an "unmanage function pointer".
 
-Now the C++ DLL will be able to "call back" our delegate as soon as the JSON Echo Server delivers a response.
+**Finally**, the C++ DLL will be able to "call back" our delegate as soon as the JSON Echo Server delivers a response.
 
 *Example, C++ client calling service & passing additional headers*
 
