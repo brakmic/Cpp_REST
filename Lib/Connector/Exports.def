@@ -1,0 +1,4 @@
+LIBRARY Connector
+EXPORTS
+    GetJson             @3
+    GetJsonWithHeaders  @4
